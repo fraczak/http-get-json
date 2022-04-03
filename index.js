@@ -2,7 +2,7 @@ var http = require("http");
 
 var httpGetJSON = (url, cb) => {
   http.get(url, res => {
-    let result = [];
+    var result = [];
     res.setEncoding('utf8')
     .on('data', (chunk) => result.push(chunk))
     .on('end', () => {
